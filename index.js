@@ -32,11 +32,11 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 console.log("%cQuestion 3", "color: red") 
 
-function drinkWater(current_thirst_level) {
+function drinkWater(currentThirstLevel) {
   console.log("Man I sure am thirsty")
-  current_thirst_level--
+  currentThirstLevel--
   console.log("Ahh the hits the spot")
-  return current_thirst_level
+  return currentThirstLevel
 }
 
 console.log(drinkWater(12))
@@ -55,7 +55,7 @@ console.log("%cQuestion 4", "color: red")
 function sameSameButDifferent(num, maybeNum) {
   if (num === maybeNum) {
     return "same same"
-  } else if (num == maybeNum) {
+  } else if (num === parseInt(maybeNum)) {
     return "same same (but different)"
   } else {
     return "different"
@@ -84,7 +84,6 @@ console.log("%cQuestion 5", "color: red")
 
 function updateGrade(student, grade) {
   student.grade = grade
-  return student
 }
 
 const student1 = { name: "Duane", grade: 88 }
@@ -100,12 +99,22 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 console.log("%cQuestion 6", "color: red")
 
+// function printNameAndPhones(users) {
+//   for (i = 0; i < users.length; i++) {
+//     console.log(users[i].name)
+//     console.log(`Cell: ${users[i].phones.cell}`)
+//     console.log(`Office: ${users[i].phones.office}`)
+//   }
+// }
+
+function showUserInfo(userObj) {
+  console.log(userObj.name)
+  console.log(`Cell: ${userObj.name}`)
+  console.log(`Office: ${userObj.name}`)
+}
+ //callback function used
 function printNameAndPhones(users) {
-  for (i = 0; i < users.length; i++) {
-    console.log(users[i].name)
-    console.log(`Cell: ${users[i].phones.cell}`)
-    console.log(`Office: ${users[i].phones.office}`)
-  }
+  users.forEach(showUserInfo)
 }
 
 const users = [ 
@@ -190,22 +199,16 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let ticket = 0
+
+function takeATicketNumber(line) {
+  ticket++
+  line.push(ticket)
+  return `Welcome. You are ticket number ${ticket}`
+}
 
 // *** Uncomment the lines below to test
 console.log("%cScope & Closures - Question 1", "color: red")
-
-function takeATicketNumber(line) {
-  // need to instatiate ticket but also set it to increase each time
-  // I know ticket number resets to 1 when now serving reduces the array length back to zero
-  if (!line.length) {
-    ticket = 1;
-  } else {
-    ticket = line.length + 1;
-  }
-  line.push(ticket);
-  return `Welcome. You are ticket number ${ticket}`
-
-}
 
 console.log(takeATicketNumber(line))
 // => `Welcome. You are ticket number 1`
@@ -225,21 +228,33 @@ console.log("%c----------", "color: red")
 
 // ***** Scope & Closures - Question 2 *****
 
+function ticketNumberGeneratorFunc(line) {
+  ticket = 0
+  return function takeATicketNumber(line) {
+    ticket++
+    line.push(ticket)
+    return `Welcome. You are ticket number ${ticket}`
+  }
+}
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 2", "color: red")
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const newLine = []
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+console.log(nowServing(newLine))
+// => `Currently serving 1.`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+console.log(nowServing(newLine))
+// => `Currently serving 2.`
+
+console.log(takeATicketNumberFunc(newLine))
+console.log(takeATicketNumberFunc(newLine))
+console.log(takeATicketNumberFunc(newLine))
+console.log("%c----------", "color: red")
