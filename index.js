@@ -179,11 +179,18 @@ function nowServing(line) {
 }
 
 const line = []
+let line_position = 0
 
 // ***** Scope & Closures - Question 1 *****
 function takeATicketNumber(line) {
-    line.push(line.length + 1)
-    return `Welcome. You are number ${line.length} in line.`
+  
+  if (!line.length) {
+    line_position++;
+  } else {
+    line_position = (line[line.length - 1] + 1);
+  }
+  line.push(line_position)
+    return `Welcome. You are ticket number ${line_position}.`
 }
 
 // *** Uncomment the lines below to test
@@ -207,7 +214,10 @@ console.log(takeATicketNumber(line))
 
 
 // ***** Scope & Closures - Question 2 *****
-
+function ticketNumberGeneratorFunc(new_line) {
+  takeATicketNumber(new_line)
+  return takeATicketNumber
+}
 
 // *** Uncomment the lines below to test
 console.log("%cScope & Closures - Question 2", "color: red")
