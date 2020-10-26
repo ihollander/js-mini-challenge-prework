@@ -222,11 +222,13 @@ console.log(takeATicketNumber(line))
 // *** Uncomment the lines below to test
 console.log("%cScope & Closures - Question 2", "color: red")
 
-function ticketNumberGeneratorFunc(){
-  takeATicketNumber(newLine)
+//Couldn't quite figure out how to get this one to work
+
+function ticketNumberGeneratorFunc(array){
+  return takeATicketNumber(array)
 }
 const newLine = []
-const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+takeATicketNumberFunc = ticketNumberGeneratorFunc()
 console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
 
