@@ -29,9 +29,9 @@ console.log("%c----------", "color: red")
 
 // *** Uncomment the lines below to test
 function drinkWater(currentThirstLevel) {
-    console.log("Man I sure am thirsty")
+    console.log(`"Man I sure am thirsty"`)
     currentThirstLevel -= 1
-    console.log("Ahh that hits the spot")
+    console.log(`"Ahh that hits the spot"`)
     return currentThirstLevel
 }
     
@@ -46,13 +46,13 @@ console.log("%c----------", "color: red")
 // ***** Question 4 *****
 function sameSameButDifferent(num,maybeNum){
   if (num === maybeNum) {
-    console.log('"same same"');
+    return '"same same"';
   }
-  else if (num == maybeNum) {
-    console.log('"same same (but different)"');
+  else if (num === parseInt(maybeNum)) {
+    return '"same same (but different)"';
   } 
   else {
-    console.log('"different"');
+    return '"different"';
   }
 }
 
@@ -134,7 +134,7 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 function triple(number) {
-  console.log(number * 3)
+  return (number * 3)
 }
 //incomplete
 
@@ -152,7 +152,7 @@ console.log("%c----------", "color: red")
 // ***** Callbacks - Question 2 *****
 
 function greet(name) {
-  console.log(`"Hi, ${name}!"`)
+  return (`Hi, ${name}!`)
 }
 
 // *** Uncomment the lines below to test
@@ -182,9 +182,11 @@ function nowServing(line) {
 const line = []
 
 // ***** Scope & Closures - Question 1 *****
-
-   function takeATicketNumber(line){
-
+let i = 0
+function takeATicketNumber(line){
+i ++
+line.push(i) 
+return `Welcome. You are ticket number ${i}`
  }
 
 // *** Uncomment the lines below to test
