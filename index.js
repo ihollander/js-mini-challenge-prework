@@ -2,10 +2,11 @@
 
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
-
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+let counter = 1
+counter = 2
+console.log(counter) 
+// => 2
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
@@ -14,12 +15,12 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
-// // => "Ian"
+const name = "Kevin"
+console.log(name)
+// => "Ian"
 // name = "Not Ian" 
-// // => TypeError
-// console.log("%c----------", "color: red") 
+// => TypeError
+console.log("%c----------", "color: red") 
 
 
 
@@ -28,11 +29,15 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+function drinkWater(num) {
+  console.log("Man I sure am thirsty")
+  a = --num 
+  console.log("Ahh that hits the spot")
+  return a
+}
+console.log(drinkWater(12))
+
+console.log("%c----------", "color: red") 
 
 
 
@@ -41,18 +46,29 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
-//
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
-//
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
-//
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+function sameSameButDifferent(num, maybeNum) {
+  num === maybeNum
+  console.log("same same")
+  num == maybeNum
+  console.log("same same (but differenct)")
+  num != maybeNum
+  console.log("different")
+  num !== maybeNum
+  console.log("different")
+}
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
+
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
+
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+
+console.log("%c----------", "color: red") 
 
 
 
