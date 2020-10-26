@@ -22,16 +22,16 @@ To get feedback on your code, make a [pull request from your forked repo](https:
 
 This assessment is meant to give you a chance to practice with the key skills you're expected to know going into Mod 3. The topics you should focus on are listed out below. It's not expected that you will have mastered all these skills yet, but completing this assessment will help us learn how to best focus out time instructing the class as a whole and also how to help each student individually.
 
-### Question 1
+<!-- ### Question 1
 
 Create a variable called `counter` and assign it to a value of 1. Then, on a new line, *reassign* the value of `counter` to 2.
 
 ```js
 console.log(counter) 
 // => 2
-```
+``` -->
 
-### Question 2
+<!-- ### Question 2
 
 Create a variable called `name` and assign it to a value of your name. You *should not* be able to reassign the variable after it has been created.
 
@@ -39,7 +39,7 @@ Create a variable called `name` and assign it to a value of your name. You *shou
 // attempting to reassign should throw an error
 name = "Not Ian" 
 // => TypeError
-```
+``` -->
 
 ### Question 3
 
@@ -63,7 +63,7 @@ console.log(drinkWater(12))
 // => 11
 ```
 
-### Question 4
+<!-- ### Question 4
 
 Write a function `sameSameButDifferent` that takes in two arguments, `num` and `maybeNum`. If `num` and `maybeNum` are both numbers, and the same value, it should return `"same same"`. If `num` is the same value as `maybeNum` after converting `maybeNum` to a number, it should return `"same same (but different)"`. Otherwise, it should return `"different"`.
 
@@ -79,9 +79,9 @@ console.log(sameSameButDifferent(5, 7))
 
 console.log(sameSameButDifferent(123, "122")) 
 // => "different"
-```
+``` -->
 
-### Question 5
+<!-- ### Question 5
 
 Write a function `updateGrade` that takes two arguments: a `student` (object), and a `grade` (number). Calling this function should update the grade property on the `student` object to be the value of the `grade` argument.
 
@@ -91,7 +91,7 @@ const student1 = { name: "Duane", grade: 88 }
 updateGrade(student1, 92)
 
 console.log(student1)
-// => { name: "Duane", grade: 92 }
+// => { name: "Duane", grade: 92 } -->
 ```
 
 ### Question 6

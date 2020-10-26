@@ -1,11 +1,13 @@
 // ***** Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
 
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+console.log("%cQuestion 1", "color: red") 
+let counter = 1
+counter = 2
+console.log(counter) 
+// => 2
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
@@ -13,83 +15,128 @@
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
+console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
-// // => "Ian"
+const name = "Bryn"
+console.log(name)
+// => "Ian"
 // name = "Not Ian" 
-// // => TypeError
-// console.log("%c----------", "color: red") 
+// => Uncaught TypeError: Assignment to constant variable. at index.js:22
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+function drinkWater(currentThirstLevel) {
+  if (currentThirstLevel >=  currentThirstLevel) {
+    console.log("Man I sure am Thirsty")
+    console.log("Ahh that hits the spot")
+    return currentThirstLevel - 1
+  }
+}
+
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 4 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
-//
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
-//
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
-//
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return "same same"
+  } else if (num == maybeNum) {
+    return "same same (but different)"
+  } else {
+    return "different"
+  }
+}
+
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
+
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
+
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 5 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
+console.log("%cQuestion 5", "color: red")
 
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)  
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red") 
+
+
+const student1 = { name: "Duane", grade: 88 }
+
+function updateGrade(student, grade) {
+  student.grade = grade
+}
+
+updateGrade(student1, 92)
+
+console.log(student1)  
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 6 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
-// // => "Duane"
-// // => "Cell: 555-123-4567"
-// // => "Office: 555-456-7890"
-// // => "Liza"
-// // => "Cell: 555-234-5678"
-// // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+function printNameAndPhones(users) {
+  for (let i = 0; i < users.length; i++) {
+    const element = users[i]
+    const name = element.name
+    console.log(name)
+    const numbers = element.phones
+    // for (let i = 0, i < numbers.length; i++) {
+    //   const element = numbers[i]
+    //   const cell = phones.cell
+    //   console.log(cell)
+    //   const office = phones.office
+    //   console.log(office)
+    // }
+  } 
+}
+
+printNameAndPhones(users)
+
+// => "Duane"
+// => "Cell: 555-123-4567"
+// => "Office: 555-456-7890"
+// => "Liza"
+// => "Cell: 555-234-5678"
+// => "Office: 555-567-1234"
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
