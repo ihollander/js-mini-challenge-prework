@@ -1,11 +1,21 @@
 // ***** Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
 
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+console.log("%cQuestion 1", "color: red") 
+
+
+// console.log("Sam") 
+
+let counter = 1
+counter = 2
+console.log(counter) 
+// => 2
+
+
+console.log("%c----------", "color: red") 
+
+
 
 
 // ***** Question 2 *****
@@ -13,46 +23,90 @@
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
-// // => "Ian"
+console.log("%cQuestion 2", "color: red") 
+
+
+const name = "Sam"
+console.log(name)
+// => "Ian"
 // name = "Not Ian" 
-// // => TypeError
-// console.log("%c----------", "color: red") 
+// => TypeError
+
+
+console.log("%c----------", "color: red") 
+
 
 
 
 // ***** Question 3 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+console.log("%cQuestion 3", "color: red") 
+
+
+function drinkWater(current_thirst_level){
+
+  thirst_in = current_thirst_level
+
+    console.log("Man I sure am thirsty")
+    thirst_out = thirst_in - 1;
+    console.log("Ahh that hits the spot")
+  
+  return thirst_out
+
+}
+
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+
+
+console.log("%c----------", "color: red") 
+
 
 
 
 // ***** Question 4 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
-//
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
-//
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
-//
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+console.log("%cQuestion 4", "color: red") 
+
+
+fucntion sameSameButDifferent(num, maybeNum){
+
+  if(num == maybeNum ?){
+
+    return ""
+  } else if(num === maybeNum ?) {
+
+
+  }
+  
+
+
+// console.log(`same`) : console.log(`different`);
+  
+
+}
+
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
+
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
+
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+
+
+console.log("%c----------", "color: red") 
 
 
 
