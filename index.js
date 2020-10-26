@@ -224,8 +224,14 @@ console.log("%cScope & Closures - Question 2", "color: red")
 
 //Couldn't quite figure out how to get this one to work
 
-function ticketNumberGeneratorFunc(array){
-  return takeATicketNumber(array)
+function ticketNumberGeneratorFunc(){
+  count = 0
+  function takeATicketNumber(array){
+    count ++
+    array.push(count)
+    return `Welcome. You are ticket number ${count}`
+  }
+  return takeATicketNumber
 }
 const newLine = []
 takeATicketNumberFunc = ticketNumberGeneratorFunc()
