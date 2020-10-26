@@ -192,18 +192,10 @@ const line = []
 console.log("%cScope & Closures - Question 1", "color: red")
 
 function takeATicketNumber(line) {
-  let ticket_number = 0
-  function takeANumber(line, name) {
-    ticket_number ++
-    line.push(name)
-  
-    return `Welcome, ${name}. You are number ${line.length} in line.`
+      line ++ 
+    return `Welcome. You are ticket number ${line}`
+    
   }
-
-  return takeANumber
-}
-
-
 
 console.log(takeATicketNumber(line))
 // => `Welcome. You are ticket number 1`
@@ -226,19 +218,19 @@ console.log(takeATicketNumber(line))
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 2", "color: red")
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const newLine = []
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+console.log(nowServing(newLine))
+// => `Currently serving 1.`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+console.log(nowServing(newLine))
+// => `Currently serving 2.`
+console.log("%c----------", "color: red") 
