@@ -6,10 +6,12 @@
 // console.log("%cQuestion 1", "color: red") 
 
 // let counter = 1
+// console.log(counter)
 
-// // // // => 2
+// // // // // => 2
 
 // counter = 2
+// console.log(counter)
 
 // console.log("%c----------", "color: red") 
 
@@ -26,7 +28,7 @@
 // const name = 'Shelby'
 
 // console.log(name)
-// // => "Ian"
+// // // => "Ian"
 // name = "Not Ian" 
 // // => TypeError
 // console.log("%c----------", "color: red") 
@@ -62,24 +64,24 @@
 // function sameSameButDifferent(num, maybeNum) {
 // 	if (num === maybeNum) {
 // 		return 'same same';
-// 	} else if (num == maybeNum) {
+// 	} else if (num === parseInt(maybeNum)) {
 // 	 return 'same same (but different)';
 // 	} else {
 // 		return 'different';
-// }
+// 	}
 // }
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
-//
+
 // console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
-//
+
 // console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
-//
+
 // console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
+// => "different"
 // console.log("%c----------", "color: red") 
 
 
@@ -99,38 +101,46 @@
 // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red") 
 
-
+// const test = (dog, count) => {
+// 	dog;
+// 	(count += 1)
+// }
 
 // ***** Question 6 *****
 
-function printNameAndPhones(users) {
+// const printNameAndPhones = users => {
+// 	users.forEach (object => {
+// 		console.log(object.name)
+// 		console.log(`Cell: ${object.phones.cell}`)
+// 		console.log(`Office: ${object.phones.office}`)
+// 	})
+// }
 
-}
 
 // *** Uncomment the lines below to test
-console.log("%cQuestion 6", "color: red")
+// console.log("%cQuestion 6", "color: red")
 	
-const users = [ 
-  { 
-    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-  },
-  { 
-    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-  }
-]
-printNameAndPhones(users)
+// const users = [ 
+//   { 
+//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+//   },
+//   { 
+//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+//   }
+// ]
+// printNameAndPhones(users)
 // // => "Duane"
 // // => "Cell: 555-123-4567"
 // // => "Office: 555-456-7890"
 // // => "Liza"
 // // => "Cell: 555-234-5678"
 // // => "Office: 555-567-1234"
-console.log("%c----------", "color: red") 
+// console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
 
-// function myMap(array, callback) {
+// const myMap = (array, callback) => {
 //   const result = []
 //   for (let i = 0; i < array.length; i++) {
 //     const element = array[i]
@@ -140,7 +150,11 @@ console.log("%c----------", "color: red")
 //   return result
 // }
 
+// const greet = name => (`Hi, ${name}!`)
+
 // ***** Callbacks - Question 1 *****
+
+// const triple = num => num * 3
 
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
@@ -166,23 +180,25 @@ console.log("%c----------", "color: red")
 
 // ***** Scope & Closures *****
 
-function takeANumber(line, name) {
-  line.push(name)
+// function takeANumber(line, name) {
+//   line.push(name)
 
-  return `Welcome, ${name}. You are number ${line.length} in line.`
-}
+//   return `Welcome, ${name}. You are number ${line.length} in line.`
+// }
 
-function nowServing(line) {
-  if (!line.length) {
-    return "There is nobody waiting to be served!"
-  }
-  return `Currently serving ${line.shift()}.`
-}
+// function nowServing(line) {
+//   if (!line.length) {
+//     return "There is nobody waiting to be served!"
+//   }
+//   return `Currently serving ${line.shift()}.`
+// }
 
-const line = []
+// const line = []
 
 // ***** Scope & Closures - Question 1 *****
-
+// const takeATicketNumber = line => {
+	
+// }
 
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
@@ -223,4 +239,4 @@ const line = []
 
 // console.log(nowServing(newLine))
 // // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+// console.log("%c----------", "color: red")
