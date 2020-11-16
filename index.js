@@ -202,15 +202,22 @@ console.log(takeATicketNumber(line))
 console.log(nowServing(line))
 // => `Currently serving 1.`
 
+
 console.log(nowServing(line))
 // => `Currently serving 2.`
 console.log("%c----------", "color: red") 
 
+// console.log(nowServing(line))
+// // => `Currently serving 2.`
+
+
 console.log(takeATicketNumber(line))
 // => `Welcome. You are ticket number 3`
 
+// console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
+
 
 function ticketNumberGeneratorFunc() {
   let num = 0;
@@ -221,6 +228,7 @@ function ticketNumberGeneratorFunc() {
   }
   return takeATicketNumber
 }
+
 
 // *** Uncomment the lines below to test
 console.log("%cScope & Closures - Question 2", "color: red")
@@ -236,6 +244,15 @@ console.log(takeATicketNumberFunc(newLine))
 console.log(nowServing(newLine))
 // => `Currently serving 1.`
 
+
 console.log(nowServing(newLine))
 // => `Currently serving 2.`
 console.log("%c----------", "color: red") 
+=======
+// console.log(nowServing(newLine))
+// // => `Currently serving 2.`
+
+// console.log(takeATicketNumberFunc(newLine))
+// // => `Welcome. You are ticket number 3`
+
+

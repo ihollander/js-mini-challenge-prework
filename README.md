@@ -254,6 +254,6 @@ console.log(nowServing(newLine))
 console.log(nowServing(newLine))
 // => `Currently serving 2.`
 
-console.log(takeATicketNumber(line))
+console.log(takeATicketNumberFunc(line))
 // => `Welcome. You are ticket number 3`
 ```
