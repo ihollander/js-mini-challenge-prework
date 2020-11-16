@@ -33,11 +33,11 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 console.log("%cQuestion 3", "color: red") 
 
-function drinkWater(x){
+function drinkWater(thirstLevel){
   console.log("Man I sure am thirsty")
-  x--
+  thirstLevel--
   console.log("Ahh that hits the spot")
-  return x
+  return thirstLevel
 }
 
 console.log(drinkWater(12))
