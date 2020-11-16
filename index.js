@@ -30,12 +30,14 @@ console.log("%c----------", "color: red")
 
 // *** Uncomment the lines below to test
 console.log("%cQuestion 3", "color: red") 
+
 function drinkWater(thirstLevel) {
-  console.log('Man I sure am thirsty')
-  thirstLevel -=1
-  console.log('Ahh that hits the spot')
+  console.log('Man I sure am thirsty');
+  thirstLevel -=1;
+  console.log('Ahh that hits the spot');
   return thirstLevel
 }
+
 console.log(drinkWater(12))
 // => "Man I sure am thirsty"
 // => "Ahh that hits the spot"
@@ -48,13 +50,16 @@ console.log("%c----------", "color: red")
 
 // *** Uncomment the lines below to test
 console.log("%cQuestion 4", "color: red") 
-function sameSameButDifferent(num1, num2) {
-  if (num1 === num2)
-  return 'same same'
-  else if (num1 == num2)
-  return 'same same (but different)'
-  
-  return 'different'
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return 'same same'
+  }
+  else if (num == maybeNum) {
+    return 'same same (but different)'
+  }
+  else {
+    return 'different'
+  }
 }
 console.log(sameSameButDifferent(5, 5)) 
 // => "same same"
@@ -74,28 +79,39 @@ console.log("%c----------", "color: red")
 // ***** Question 5 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
+console.log("%cQuestion 5", "color: red")
 
-// const student1 = { name: "Duane", grade: 88 }
+const student1 = { name: "Duane", grade: 88 }
 
-// function updateGrade (student, newGrade) {
-//   const grade = newGrade
-//   return {
-//     name: name,
-//     grade: grade
-//   }
-// }
-// updateGrade(student1, 92)
-// console.log(student1)  
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red") 
-
+function updateGrade (student, grade) {
+  student.grade = grade
+}
+updateGrade(student1, 92)
+console.log(student1)  
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 6 *****
 
 // *** Uncomment the lines below to test
 console.log("%cQuestion 6", "color: red")
+
+function printNameAndPhones(users) {
+  // for..in => Can make it work, but better for iterating over keys in objects
+  // for (let i = 0...)
+  
+  // for..of => iterate over elements from arrays
+  // for (let userObj of users) {
+  //   console.log(userObj)
+  // }
+  // forEach 
+  users.forEach(function(userObj) {
+    console.log(userObj.name)
+    console.log(`Cell: ${userObj.phones.cell}`)
+    console.log(`Office: ${userObj.phones.office}`)
+  })
+}
 
 const users = [ 
   { 
@@ -128,16 +144,20 @@ function myMap(array, callback) {
 }
 
 // ***** Callbacks - Question 1 *****
+function myMap([], ) {
+
+}
+
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
-//
-// console.log(myMap([2,4,6,8], triple))   
-// // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log(myMap([1,2,3,4,5], triple)) 
+// => [3,6,9,12,15]
+
+console.log(myMap([2,4,6,8], triple))   
+// => [6,12,18,24]
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
@@ -169,45 +189,50 @@ function nowServing(line) {
 const line = []
 
 // ***** Scope & Closures - Question 1 *****
-
+let ticketNumber = 0  
+function takeATicketNumber(line) {
+  ticketNumber ++
+  line.push(ticketNumber)
+  return `Welcome. You are ticket number ${ticketNumber}`
+}
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+console.log(nowServing(line))
+// => `Currently serving 2.`
+console.log("%c----------", "color: red") 
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
 
 // ***** Scope & Closures - Question 2 *****
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 2", "color: red")
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const newLine = []
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+console.log(nowServing(newLine))
+// => `Currently serving 1.`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
-// console.log("%c----------", "color: red") 
+console.log(nowServing(newLine))
+// => `Currently serving 2.`
+console.log("%c----------", "color: red") 
