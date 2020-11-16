@@ -1,7 +1,7 @@
 // ***** Question 1 *****
 
 let counter = 1
-counter = 2
+counter += 1
 
 // *** Uncomment the lines below to test
 console.log("%cQuestion 1", "color: red") 
@@ -92,14 +92,28 @@ console.log("%c----------", "color: red")
 
 // ***** Question 6 *****
 
-function printNameAndPhones(users) {
-  for (x in users) {
-  console.log(users[x]['name']);
-  console.log(`Cell: ${users[x]['phones']['cell']}`)
-  console.log(`Office: ${users[x]['phones']['office']}`)
+// function printNameAndPhones(users) {
+//   for (x in users) {
+//   console.log(users[x]['name']);
+//   console.log(`Cell: ${users[x]['phones']['cell']}`)
+//   console.log(`Office: ${users[x]['phones']['office']}`)
+//   }
+// }
+
+fucnction printNameAndPhones(users) {
+  for (let userObj of users) {
+    console.log(userObj.name)
+    console.log(`Cell: ${userObj.phones.cell}`)
+    console.log(`Cell: ${userObj.phones.office}`)
   }
 }
-
+function printNameAndPhones(users) {
+  users.forEach(function(userObj){
+    console.log(userObj.name)
+    console.log(`Cell: ${userObj.phones.cell}`)
+    console.log(`Cell: ${userObj.phones.office}`)
+})
+}
   
 
 // // *** Uncomment the lines below to test
