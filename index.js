@@ -2,10 +2,16 @@
 
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
+// let counter = 1;
+
+// if (counter === 1) {
+//   let counter = 2;
+//   console.log(counter)
+// }
 
 // console.log(counter) 
 // // => 2
-// console.log("%c----------", "color: red") 
+// // console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
@@ -15,11 +21,13 @@
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
 
+// const name = "Ian";
+
 // console.log(name)
 // // => "Ian"
 // name = "Not Ian" 
 // // => TypeError
-// console.log("%c----------", "color: red") 
+// // console.log("%c----------", "color: red") 
 
 
 
@@ -28,6 +36,16 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
 
+// let current_thirst_level = 12;
+
+// function drinkWater() {
+//   if (current_thirst_level === 12) {
+//     console.log("Man I sure am thirsty");
+//     current_thirst_level -= 1
+//   }
+//   console.log("Ahh that hits the spot");
+//   current_thirst_level
+// }
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
@@ -38,18 +56,28 @@
 
 // ***** Question 4 *****
 
-// *** Uncomment the lines below to test
+// function sameSameButDifferent(num, maybeNum) {
+//   if (num === maybeNum) {
+//     console.log("same same");
+//     } else if (num == maybeNum) { 
+//     console.log("same same (but different)");
+//   } else {
+//     console.log("different");
+//   }
+// }
+
+// // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
-//
+
 // console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
-//
+
 // console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
-//
+
 // console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
@@ -61,6 +89,11 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
 
+
+// function updateGrade(student, grade){
+//   student1.name = "Duane";
+//   student1.grade = grade;
+// }
 // const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
 // console.log(student1)  
@@ -72,24 +105,32 @@
 // ***** Question 6 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
-// // => "Duane"
-// // => "Cell: 555-123-4567"
-// // => "Office: 555-456-7890"
-// // => "Liza"
-// // => "Cell: 555-234-5678"
-// // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+function printNameAndPhones(users){
+  for (let i = 0; i < users.length; i++) {
+    console.log(user.name);
+    console.log(user.phones.cell);
+    console.log(user.phones.office);
+  }
+}
+
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+printNameAndPhones(users)
+// => "Duane"
+// => "Cell: 555-123-4567"
+// => "Office: 555-456-7890"
+// => "Liza"
+// => "Cell: 555-234-5678"
+// => "Office: 555-567-1234"
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
@@ -162,13 +203,15 @@ const line = []
 
 // console.log(nowServing(line))
 // // => `Currently serving 2.`
+// console.log("%c----------", "color: red") 
 
 // console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
+
+
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 2", "color: red")
 
@@ -185,8 +228,4 @@ const line = []
 
 // console.log(nowServing(newLine))
 // // => `Currently serving 2.`
-
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 3`
-
 // console.log("%c----------", "color: red") 
